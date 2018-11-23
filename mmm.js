@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import { View, Text } from 'react-native';
 import axios from 'axios';
+import { Item, Label, Input } from 'native-base';
 
 
 @observer
@@ -17,6 +18,14 @@ export default class mmm extends Component {
                 <Text>
                     Aya
                 </Text>
+                <Item floatingLabel last>
+                    <Label>Username</Label>
+                    <Input />
+                </Item>
+                <Item floatingLabel >
+                    <Label>Password</Label>
+                    <Input />
+                </Item>
             </View>
         );
     }
