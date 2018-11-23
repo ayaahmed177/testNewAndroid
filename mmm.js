@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import { View, Text } from 'react-native';
 import axios from 'axios';
 import { Item, Label, Input } from 'native-base';
+import DeviceInfo from 'react-native-device-info';
 
 
 @observer
@@ -10,13 +11,23 @@ export default class mmm extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            batteryLevel: null
+        };
+    }
+    componentWillMount() {
+        DeviceInfo.getBatteryLevel().then(batteryLevel => {
+            // 0.759999
+            this.setState({ batteryLevel });
+        });
     }
 
     render() {
         return (
             <View style={styles.conainerView}>
                 <Text>
-                    Aya
+                    {'Aya \n'}
+                    {'batteryLevel : ' + this.state.batteryLevel}
                 </Text>
                 <Item floatingLabel last>
                     <Label>Username</Label>
