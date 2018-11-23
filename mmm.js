@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { observer } from 'mobx-react';
 import { View, Text } from 'react-native';
 
 
-// @observer
+@observer
 export default class mmm extends Component {
 
     constructor(props) {
