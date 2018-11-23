@@ -8,6 +8,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "mobx": "^4.6.0",
     "mobx-react": "^5.4.2",
     "react": "16.6.1",
