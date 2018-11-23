@@ -4,6 +4,7 @@ import { View, Text } from 'react-native';
 import axios from 'axios';
 import { Item, Label, Input } from 'native-base';
 import DeviceInfo from 'react-native-device-info';
+import I18n from 'react-native-i18n';
 
 
 @observer
